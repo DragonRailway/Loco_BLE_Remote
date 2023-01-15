@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+#Other files
+*.svd
+debug_custom.json
+debug.cfg
