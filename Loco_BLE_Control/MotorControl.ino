@@ -14,6 +14,7 @@ COROUTINE(MotorDriver) {
     uint16_t Mduty = map(CurrentSpeed, 0, 10000, MinDuty, MaxDuty);
     Mduty = constrain(Mduty, MinDuty, MaxDuty);
 
+
     if (CurrentSpeed == 0) {
       Mduty = 0;
       pwm.write(MotorA2, 0, PwmFrequency, PwmResolution);
@@ -45,9 +46,9 @@ COROUTINE(RecvUpdate) {
   COROUTINE_LOOP() {
 
     Throttle = RemoteXY.speedSlider;
-    if (CurrentSpeed == 0) {
-      Direction = RemoteXY.dirSW;
-    }
+    TargetSpeed = map(Throttle, 0, 100, 0, 10000);
+
+    Direction = RemoteXY.dirSW;
     Light = RemoteXY.lightSW;
     Horn = RemoteXY.hornBTN;
     // add coupler if needed
@@ -56,12 +57,6 @@ COROUTINE(RecvUpdate) {
   }
 }
 
-COROUTINE(ThrottleUpdate) {
-  COROUTINE_LOOP() {
-    TargetSpeed = map(Throttle, 0, 100, 0, 10000);
-    COROUTINE_DELAY(100);  //  Updates Throttle 10 times/second
-  }
-}
 
 COROUTINE(AccelControl) {
   COROUTINE_LOOP() {

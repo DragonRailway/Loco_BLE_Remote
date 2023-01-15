@@ -18,6 +18,7 @@
 // RemoteXY select connection mode and include library 
 #define REMOTEXY_MODE__ESP32CORE_BLE
 #include <BLEDevice.h>
+
 #include <RemoteXY.h>
 
 // RemoteXY connection settings 
@@ -28,8 +29,8 @@
 // RemoteXY configurate  
 #pragma pack(push, 1)
 uint8_t RemoteXY_CONF[] =   // 81 bytes
-  { 255,4,0,0,0,74,0,16,172,1,4,0,36,16,13,53,79,111,2,1,
-  27,80,28,12,173,79,16,31,62,0,60,0,10,114,9,26,13,12,95,160,
+  { 255,4,0,0,0,74,0,16,172,1,4,0,39,17,14,71,79,111,2,1,
+  4,76,26,12,173,79,16,31,62,0,60,0,10,114,9,26,13,12,95,160,
   76,76,105,103,104,116,0,31,1,1,9,50,13,13,188,31,72,111,114,110,
   0,129,0,13,7,37,6,31,76,111,99,111,32,67,111,110,116,114,111,108,
   0 };
