@@ -1,14 +1,16 @@
 //==============================================================================================
 // Light Pins
 #define HeadPin 17
-#define HeadPin2 16
+#define TailPin 5
 
+#define Lpin 18
+#define Rpin 19
 // H bridges
-#define MotorA1 33
-#define MotorA2 32
+#define MotorA1 16
+#define MotorA2 4
 
-#define MotorB1 27
-#define MotorB2 32
+#define MotorB1 0
+#define MotorB2 0
 
 // ESC out
 #define EscPin 33

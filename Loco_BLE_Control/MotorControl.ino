@@ -7,7 +7,7 @@ int16_t Difference = 0;
 COROUTINE(MotorDriver) {
   COROUTINE_LOOP() {
 
-#ifdef HbridgeA
+
     uint16_t MinDuty = pow(2, PwmResolution) * MinPwm / 100;
     uint16_t MaxDuty = (pow(2, PwmResolution) * MaxPwm / 100 - 1);
 
@@ -36,7 +36,6 @@ COROUTINE(MotorDriver) {
     Serial.print(Direction);
     Serial.print("    PWM:");
     Serial.println(Mduty);
-#endif
 #endif
     COROUTINE_DELAY(10);
   }

@@ -22,7 +22,7 @@
 #include <RemoteXY.h>
 
 // RemoteXY connection settings 
-#define REMOTEXY_BLUETOOTH_NAME "Train Control"
+#define REMOTEXY_BLUETOOTH_NAME "GP7"
 #define REMOTEXY_ACCESS_PASSWORD "1234"
 
 
