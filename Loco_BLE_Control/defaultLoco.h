@@ -30,7 +30,7 @@
 #define HeadLightPin 12        // Headlight
 #define HeadLight2Pin 14       // Secondary headlight (Top Headlight, only present in F7 loco)
 
-#define RearLight 27           // Rearlight
+#define RearLightPin 27           // Rearlight
 
 #define AuxLightPin 26         // Extra light (rear lights are available in GP7 loco)
 
