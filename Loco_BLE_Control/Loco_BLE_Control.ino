@@ -77,9 +77,9 @@ COROUTINE(ConnectStatus) {
       Throttle = 0;
 
       bool status;
-      digitalWrite(HeadPin, status);
-      digitalWrite(Lpin, !status);
-      digitalWrite(Rpin, !status);
+      digitalWrite(HeadLightPin, status);
+      digitalWrite(HeadLight2Pin, !status);
+      digitalWrite(RearLightPin, !status);
       status = !status;
     }
     COROUTINE_DELAY(500);  //  Check connection 2 times/second
